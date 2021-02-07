@@ -10,7 +10,30 @@ export default function videoPlayerPage({ user }) {
             <PlayerPageHeader>
                 <h1>{site_name}</h1>
             </PlayerPageHeader>
-            <div className={style.content}></div>
+            <div className={style.content}>
+                <div>
+                    <div className={style.videoContainer}>
+                        <div className={style.videoWrapper}>
+                            <Player></Player>
+                        </div>
+                    </div>
+                    <h2>Titre de la vidéo</h2>
+                </div>
+                <div>
+                    <h3>Description</h3>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Minima quas quidem corporis quibusdam totam
+                        distinctio, libero officiis consequatur, ipsa numquam
+                        rerum soluta, sunt neque modi. Architecto accusamus ad
+                        debitis quia. Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Sunt nihil iusto, labore magni quasi
+                        distinctio, saepe quidem sed sapiente, provident
+                        voluptate asperiores expedita nesciunt dolore id officia
+                        recusandae quaerat ipsam!
+                    </p>
+                </div>
+            </div>
         </>
     );
 }
