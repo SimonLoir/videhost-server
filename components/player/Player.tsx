@@ -3,24 +3,18 @@ import Hls from 'hls.js';
 export default class Player extends React.Component {
     private player;
     public state = {};
-    public componentDidUpdate() {
+    public componentDidMount() {
+        console.log('e');
         const video = this.player;
         const hls = new Hls();
-        const file = `#EXTM3U
-#EXT-X-VERSION:3
-#EXT-X-TARGETDURATION:14
-#EXT-X-MEDIA-SEQUENCE:0
-#EXTINF:13.646967,
-http://localhost:3000/videos/dGVzdA/index0.ts
-#EXTINF:0.100100,
-http://localhost:3000/videos/dGVzdA/index1.ts
-#EXT-X-ENDLIST`;
-        const enc = new TextEncoder();
 
-        hls.loadSource(URL.createObjectURL(new Blob([enc.encode(file)])));
+        hls.loadSource('https://vps.loir.xyz/hls/test.m3u8');
         hls.attachMedia(video);
         hls.on(Hls.Events.MANIFEST_PARSED, function () {
             video.play();
+        });
+        hls.on(Hls.Events.ERROR, function (e, d) {
+            console.log(e, d);
         });
     }
     public render() {
@@ -29,6 +23,7 @@ http://localhost:3000/videos/dGVzdA/index1.ts
                 className='videoCanvas'
                 ref={(player) => (this.player = player)}
                 autoPlay={true}
+                controls
             />
         );
     }

@@ -18,9 +18,6 @@ export default function videoPlayerPage({ user }) {
                         </div>
                     </div>
                     <h2>Titre de la vidéo</h2>
-                </div>
-                <div>
-                    <h3>Description</h3>
                     <p>
                         Lorem ipsum dolor sit, amet consectetur adipisicing
                         elit. Minima quas quidem corporis quibusdam totam
@@ -33,6 +30,7 @@ export default function videoPlayerPage({ user }) {
                         recusandae quaerat ipsam!
                     </p>
                 </div>
+                <div></div>
             </div>
         </>
     );
