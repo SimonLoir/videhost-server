@@ -7,7 +7,7 @@ export default class Player extends React.Component {
         const video = this.player;
         const hls = new Hls();
 
-        //hls.loadSource('https://vps.loir.xyz/hls/test.m3u8');
+        hls.loadSource('https://vps.loir.xyz/hls/test.m3u8');
         hls.attachMedia(video);
         hls.on(Hls.Events.MANIFEST_PARSED, function () {
             video.play();
