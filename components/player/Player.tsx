@@ -4,11 +4,10 @@ export default class Player extends React.Component {
     private player;
     public state = {};
     public componentDidMount() {
-        console.log('e');
         const video = this.player;
         const hls = new Hls();
 
-        hls.loadSource('https://vps.loir.xyz/hls/test.m3u8');
+        //hls.loadSource('https://vps.loir.xyz/hls/test.m3u8');
         hls.attachMedia(video);
         hls.on(Hls.Events.MANIFEST_PARSED, function () {
             video.play();
@@ -20,7 +19,6 @@ export default class Player extends React.Component {
     public render() {
         return (
             <video
-                className='videoCanvas'
                 ref={(player) => (this.player = player)}
                 autoPlay={true}
                 controls

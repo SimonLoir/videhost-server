@@ -1,0 +1,42 @@
+.room {
+    position: relative;
+    border: 1px solid #dedede;
+    height: 100%;
+    width: 100%;
+}
+
+.header {
+    line-height: 45px;
+    border-bottom: 1px solid #dedede;
+    text-align: center;
+    font-weight: 700;
+    color: rgb(45, 45, 45);
+}
+
+.messages {
+    height: calc(100% - 91px);
+    word-break: break-all;
+}
+
+.sender_actions {
+    line-height: 45px;
+    height: 45px;
+    border-top: 1px solid #dedede;
+    display: grid;
+    grid-template-columns: 1fr 45px;
+    input,
+    button {
+        border: none;
+        background-color: white;
+    }
+    button {
+        border-left: 1px solid #dedede;
+        cursor: pointer;
+    }
+    overflow: hidden;
+    input {
+        padding-left: 8px;
+        padding-right: 8px;
+        font-size: 15px;
+    }
+}
